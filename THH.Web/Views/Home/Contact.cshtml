@@ -1,0 +1,1618 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="zh-cn" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <!-- 样式 -->
+    <link rel="stylesheet" href="http://cdn.admui.com/demo/iframe/2.1.0/themes/global/css/bootstrap.css">
+    @*<link href="~/Content/Themes/bootstrap.css" rel="stylesheet" />*@
+    <link rel="stylesheet" href="http://cdn.admui.com/demo/iframe/2.1.0/themes/base/css/index.css" id="admui-siteStyle">
+    @*<link href="~/Content/Themes/index.css" rel="stylesheet" />*@
+    <!-- 图标 CSS-->
+    <link rel="stylesheet" href="http://cdn.admui.com/demo/iframe/2.1.0/fonts/font-awesome/font-awesome.css">
+    @*<link href="~/Content/Themes/awesome.css" rel="stylesheet" />*@
+    <link rel="stylesheet" href="http://cdn.admui.com/demo/iframe/2.1.0/fonts/web-icons/web-icons.css">
+    @*<link href="~/Content/Themes/icons.css" rel="stylesheet" />*@
+
+    <!-- 插件 -->
+    <script src="http://cdn.admui.com/demo/iframe/2.1.0/vendor/jquery/jquery.min.js"></script>
+    @*<script src="~/Scripts/jquery-3.3.1.min.js"></script>*@
+    <script src="http://cdn.admui.com/demo/iframe/2.1.0/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="http://cdn.admui.com/demo/iframe/2.1.0/vendor/lodash/lodash.min.js"></script>
+    <script src="http://cdn.admui.com/demo/iframe/2.1.0/vendor/breakpoints/breakpoints.min.js"></script>
+    <script src="http://cdn.admui.com/demo/iframe/2.1.0/vendor/artTemplate/template-web.js"></script>
+    <script src="http://cdn.admui.com/demo/iframe/2.1.0/vendor/layer/layer.min.js"></script>
+
+    <!-- 核心  -->
+    <script src="http://cdn.admui.com/demo/iframe/2.1.0/themes/global/js/core.js"></script>
+    @*<script src="~/Scripts/core.js"></script>*@
+    <script src="http://cdn.admui.com/demo/iframe/2.1.0/themes/global/js/configs/site-configs.js"></script>
+    @*<script src="~/Scripts/site-configs.js"></script>*@
+    <script src="http://cdn.admui.com/demo/iframe/2.1.0/themes/global/js/components.js"></script>
+    @*<script src="~/Scripts/components.js"></script>*@
+
+    <!-- 布局 -->
+    <script src="http://cdn.admui.com/demo/iframe/2.1.0/themes/base/js/site.js"></script>
+    @*<script src="~/Scripts/site.js"></script>*@
+    <script src="http://cdn.admui.com/demo/iframe/2.1.0/themes/base/js/sections/content-tabs.js"></script>
+    @*<script src="~/Scripts/content-tabs.js"></script>*@
+
+    <script>
+        "use strict";
+        Breakpoints();
+    </script>
+
+</head>
+<body class="site-contabs-open site-menubar-unfold  "
+      data-theme="base">
+    <nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-inverse  bg-blue-600"
+         id="admui-siteNavbar" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggler hamburger hamburger-close navbar-toggler-left hided"
+                    data-toggle="menubar">
+                <span class="sr-only">切换菜单</span>
+                <span class="hamburger-bar"></span>
+            </button>
+            <button type="button" class="navbar-toggler collapsed" data-target="#admui-navbarCollapse"
+                    data-toggle="collapse">
+                <i class="icon wb-more-horizontal" aria-hidden="true"></i>
+            </button>
+            <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
+                <img class="navbar-brand-logo d-sm-block d-lg-block d-none navbar-logo"
+                     src="http://cdn.admui.com/demo/iframe/2.1.0/images/logo-white.svg" title="Admui">
+                <img class="navbar-brand-logo d-sm-none navbar-logo-mini" src="http://cdn.admui.com/demo/iframe/2.1.0/images/logo-white-min.svg"
+                     title="Admui">
+            </div>
+        </div>
+        <div class="navbar-container container-fluid">
+            <div class="collapse navbar-collapse navbar-collapse-toolbar" id="admui-navbarCollapse">
+                <ul class="nav navbar-toolbar navbar-left">
+                    <li class="nav-item hidden-float" id="toggleMenubar">
+                        <a class="nav-link" data-toggle="menubar" href="javascript:;" role="button"
+                           id="admui-toggleMenubar">
+                            <i class="icon hamburger hamburger-arrow-left">
+                                <span class="sr-only">切换目录</span>
+                                <span class="hamburger-bar"></span>
+                            </i>
+                        </a>
+                    </li>
+                    <li class="navbar-menu nav-tabs-horizontal nav-tabs-animate is-load" id="admui-navMenu">
+                        <ul class="nav navbar-toolbar nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active show"
+                                   data-toggle="tab" href="#admui-navTabsItem-22"
+                                   aria-controls="admui-navTabsItem-22" role="tab" aria-expanded="false">
+                                    <i class="icon wb-library"></i>
+                                    <span>UI 示例</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   data-toggle="tab" href="#admui-navTabsItem-11236"
+                                   aria-controls="admui-navTabsItem-11236" role="tab" aria-expanded="false">
+                                    <i class="icon wb-desktop"></i>
+                                    <span>页面示例</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   data-toggle="tab" href="#admui-navTabsItem-11230"
+                                   aria-controls="admui-navTabsItem-11230" role="tab" aria-expanded="false">
+                                    <i class="icon wb-table"></i>
+                                    <span>表格示例</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   data-toggle="tab" href="#admui-navTabsItem-11239"
+                                   aria-controls="admui-navTabsItem-11239" role="tab" aria-expanded="false">
+                                    <i class="icon wb-order"></i>
+                                    <span>表单示例</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   data-toggle="tab" href="#admui-navTabsItem-11240"
+                                   aria-controls="admui-navTabsItem-11240" role="tab" aria-expanded="false">
+                                    <i class="icon wb-pie-chart"></i>
+                                    <span>统计图表</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   data-toggle="tab" href="#admui-navTabsItem-11241"
+                                   aria-controls="admui-navTabsItem-11241" role="tab" aria-expanded="false">
+                                    <i class="icon fa-bars"></i>
+                                    <span>菜单示例</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   data-toggle="tab" href="#admui-navTabsItem-1"
+                                   aria-controls="admui-navTabsItem-1" role="tab" aria-expanded="false">
+                                    <i class="icon wb-settings"></i>
+                                    <span>系统管理</span>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown" id="admui-navbarSubMenu">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="javascript:;"
+                                   data-animation="slide-bottom">
+                                    更多
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item no-menu" href="/sitemap" target="_blank">
+                                        <i class="icon wb-list-numbered"></i>
+                                        <span>网站地图</span>
+                                    </a>
+                                    <a class="dropdown-item no-menu" href="/system/menu" target="_blank">
+                                        <i class="icon wb-wrench"></i>
+                                        <span>菜单管理</span>
+                                    </a>
+                                    <div class="dropdown-divider" role="presentation"></div>
+                                    <div class="dropdown-submenu">
+                                        <a class="dropdown-item no-menu" href="javascript:;" tabindex="-1">
+                                            <i class="icon wb-random" aria-hidden="true"></i>
+                                            <span>切换版本</span>
+                                        </a>
+                                        <div class="dropdown-menu" role="menu">
+                                            <a class="dropdown-item active no-menu" href="http://iframe.demo.admui.com"
+                                               role="menuitem">Iframe 版</a>
+                                            <a class="dropdown-item no-menu" href="http://basic.demo.admui.com"
+                                               role="menuitem">Basic 版</a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-submenu">
+                                        <a class="dropdown-item no-menu" href="javascript:;" tabindex="-1">
+                                            <i class="icon wb-random" aria-hidden="true"></i>
+                                            <span>切换布局</span>
+                                        </a>
+                                        <div class="dropdown-menu" role="menu">
+
+                                            <a class="dropdown-item no-menu change-layout active" href="javascript:;" data-layout="base" role="menuitem">Base 布局 </a>
+                                            <a class="dropdown-item no-menu change-layout" href="javascript:;" data-layout="topbar" role="menuitem">Topbar 布局</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+                    <li class="nav-item dropdown" id="admui-navbarUser">
+                        <a class="nav-link navbar-avatar" data-toggle="dropdown" href="javascript:;" aria-expanded="false"
+                           data-animation="scale-up"
+                           role="button">
+                            <span class="avatar avatar-online">
+                                <img src="http://cdn.admui.com/demo/iframe/2.1.0/images/avatar.svg" alt="...">
+                                <i></i>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a class="dropdown-item" href="/system/account?tab=display" role="menuitem"
+                               target="_blank">
+                                <i class="icon wb-layout" aria-hidden="true"></i>
+                                <span>显示设置</span>
+                            </a>
+                            <a class="dropdown-item" href="/system/account?tab=password" role="menuitem"
+                               target="_blank">
+                                <i class="icon wb-pencil" aria-hidden="true"></i>
+                                <span>修改密码</span>
+                            </a>
+                            <a class="dropdown-item" href="/system/account" role="menuitem" target="_blank">
+                                <i class="icon wb-settings" aria-hidden="true"></i>
+                                <span>账户信息</span>
+                            </a>
+                            <div class="dropdown-submenu">
+                                <a class="dropdown-item" href="javascript:;" tabindex="-1">
+                                    <i class="icon wb-random" aria-hidden="true"></i>
+                                    <span>切换版本</span>
+                                </a>
+                                <div class="dropdown-menu" role="menu">
+                                    <a class="dropdown-item active" href="http://iframe.demo.admui.com" role="menuitem">
+                                        Iframe
+                                        版
+                                    </a>
+                                    <a class="dropdown-item" href="http://basic.demo.admui.com" role="menuitem">Basic 版</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-divider" role="presentation"></div>
+                            <a class="dropdown-item" id="admui-signOut" data-ctx="" href="/logout" role="menuitem">
+                                <i class="icon wb-power"></i>
+                                <span>退出</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown" id="admui-navbarMessage">
+                        <a class="nav-link msg-btn" data-toggle="dropdown" href="javascript:;" aria-expanded="false"
+                           data-animation="scale-up" role="button">
+                            <i class="icon wb-bell" aria-hidden="true"></i>
+                            <span class="badge badge-danger up msg-num"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
+                            <li class="dropdown-menu-header" role="presentation">
+                                <h5>最新消息</h5>
+                                <span class="badge badge-round label-danger"></span>
+                            </li>
+                            <li class="list-group" role="presentation">
+                                <div class="navbar-message-content h-250" data-plugin="mCustomScrollbar">
+                                    <div id="admui-messageContent"></div>
+                                </div>
+                                <script type="text/html" id="admui-messageTpl">
+                                    {{ if pageList.length<1}}
+                                    <p class="text-center h-200 vertical-align">
+                                        <small class="vertical-align-middle opacity-four">没有新消息</small>
+                                    </p>
+                                    {{else}}
+                                    {{each pageList}}
+                                    <a class="list-group-item" href="#" data-id="{{$value.id}}"
+                                       data-title="{{$value.title}}"
+                                       data-content="{{$value.content}}" role="menuitem">
+                                        <div class="media">
+                                            <div class="pr-10">
+                                                <i class="icon {{$imports.iconType($value.id)}} white icon-circle"
+                                                   aria-hidden="true"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <h6 class="media-heading">{{$value.title}}</h6>
+                                                <time class="media-meta" datetime="{{$value.sendTime}}">
+                                                    {{$imports.timeMsg($value.sendTime)}}
+                                                </time>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    {{/each}}
+                                    {{/if}}
+                                </script>
+                            </li>
+                            <div class="dropdown-menu-footer" role="presentation">
+                                <a class="dropdown-item" href="/system/account?tab=message" role="menuitem"
+                                   target="_blank">
+                                    <i class="icon fa-navicon"></i>所有消息
+                                </a>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item d-none d-sm-block" id="admui-navbarDisplay" data-toggle="tooltip"
+                        data-placement="bottom" title="设置主题与布局等">
+                        <a class="nav-link" href="/system/settings/display" target="_blank">
+                            <i class="icon wb-layout"></i>
+                            <span class="sr-only">主题与布局</span>
+                        </a>
+                    </li>
+                    <li class="nav-item d-none d-sm-block" id="admui-navbarFullscreen" data-toggle="tooltip"
+                        data-placement="bottom" title="全屏">
+                        <a class="nav-link" href="javascript:; " role="button">
+                            <i class="icon icon-fullscreen"></i>
+                            <span class="sr-only">全屏</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="site-menubar site-menubar-dark" id="admui-siteMenubar">
+        <div class="site-menubar-body">
+            <div class="tab-content h-full" id="admui-navTabs">
+                <div class="tab-pane animation-fade h-full  active"
+                     id="admui-navTabsItem-22" role="tabpanel">
+                    <ul class="site-menu">
+
+                        <li class="site-menu-category">UI 示例</li>
+
+
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:;">
+                                <i class="site-menu-icon fa-laptop" aria-hidden="true"></i>
+                                <span class="site-menu-title">布局</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+
+
+                                <li class="site-menu-item has-sub">
+                                    <a href="javascript:;">
+                                        <span class="site-menu-title">栅格</span>
+                                        <span class="site-menu-arrow"></span>
+                                    </a>
+                                    <ul class="site-menu-sub">
+                                        <li class="site-menu-item">
+                                            <a href="/components/layouts/grids" target="_blank">
+                                                <span class="site-menu-title">基本栅格</span>
+                                            </a>
+                                        </li>
+                                        <li class="site-menu-item">
+                                            <a href="/components/layouts/layout-grid" target="_blank">
+                                                <span class="site-menu-title">布局栅格</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+
+                                <li class="site-menu-item has-sub">
+                                    <a href="javascript:;">
+                                        <span class="site-menu-title">标题栏</span>
+                                        <span class="site-menu-arrow"></span>
+                                    </a>
+                                    <ul class="site-menu-sub">
+                                        <li class="site-menu-item">
+                                            <a href="/components/layouts/headers" target="_blank">
+                                                <span class="site-menu-title">普通</span>
+                                            </a>
+                                        </li>
+                                        <li class="site-menu-item">
+                                            <a href="/components/layouts/bordered-header" target="_blank">
+                                                <span class="site-menu-title">带边框</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="site-menu-item">
+                                    <a href="/components/layouts/panel-transition" target="_blank">
+                                        <span class="site-menu-title">面板动画</span>
+                                    </a>
+                                </li>
+
+
+
+                                <li class="site-menu-item has-sub">
+                                    <a href="javascript:;">
+                                        <span class="site-menu-title">侧边栏</span>
+                                        <span class="site-menu-arrow"></span>
+                                    </a>
+                                    <ul class="site-menu-sub">
+                                        <li class="site-menu-item">
+                                            <a href="/components/layouts/aside/left-static" target="_blank">
+                                                <span class="site-menu-title">左侧普通</span>
+                                            </a>
+                                        </li>
+                                        <li class="site-menu-item">
+                                            <a href="/components/layouts/aside/left-fixed" target="_blank">
+                                                <span class="site-menu-title">左侧浮动</span>
+                                            </a>
+                                        </li>
+                                        <li class="site-menu-item">
+                                            <a href="/components/layouts/aside/right-static" target="_blank">
+                                                <span class="site-menu-title">右侧普通</span>
+                                            </a>
+                                        </li>
+                                        <li class="site-menu-item">
+                                            <a href="/components/layouts/aside/right-fixed" target="_blank">
+                                                <span class="site-menu-title">右侧浮动</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="site-menu-item">
+                                    <a href="/components/layouts/two-columns" target="_blank">
+                                        <span class="site-menu-title">两栏式布局</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:;">
+                                <i class="site-menu-icon fa-cube" aria-hidden="true"></i>
+                                <span class="site-menu-title">基本</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+
+
+                                <li class="site-menu-item has-sub">
+                                    <a href="javascript:;">
+                                        <span class="site-menu-title">面板</span>
+                                        <span class="site-menu-arrow"></span>
+                                    </a>
+                                    <ul class="site-menu-sub">
+                                        <li class="site-menu-item">
+                                            <a href="/components/basic/panel/structure" target="_blank">
+                                                <span class="site-menu-title">面板结构</span>
+                                            </a>
+                                        </li>
+                                        <li class="site-menu-item">
+                                            <a href="/components/basic/panel/actions" target="_blank">
+                                                <span class="site-menu-title">面板操作</span>
+                                            </a>
+                                        </li>
+                                        <li class="site-menu-item">
+                                            <a href="/components/basic/panel/portlets" target="_blank">
+                                                <span class="site-menu-title">面板组件</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="site-menu-item">
+                                    <a href="/components/basic/buttons" target="_blank">
+                                        <span class="site-menu-title">按钮</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/basic/icons" target="_blank">
+                                        <span class="site-menu-title">矢量图标</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/basic/dropdowns" target="_blank">
+                                        <span class="site-menu-title">下拉菜单</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/basic/list" target="_blank">
+                                        <span class="site-menu-title">列表组</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/basic/tooltip-popover" target="_blank">
+                                        <span class="site-menu-title">气泡提示 &amp; 弹出框</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/basic/modals" target="_blank">
+                                        <span class="site-menu-title">模态框</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/basic/tabs-accordions" target="_blank">
+                                        <span class="site-menu-title">选项卡 &amp; 折叠面板</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/basic/images" target="_blank">
+                                        <span class="site-menu-title">图片</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/basic/badges" target="_blank">
+                                        <span class="site-menu-title">徽章 &amp; 标签</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/basic/carousel" target="_blank">
+                                        <span class="site-menu-title">轮播组件</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/basic/typography" target="_blank">
+                                        <span class="site-menu-title">排版</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/basic/progress-bars" target="_blank">
+                                        <span class="site-menu-title">进度条</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/basic/colors" target="_blank">
+                                        <span class="site-menu-title">配色方案</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/basic/utilities" target="_blank">
+                                        <span class="site-menu-title">辅助类</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:;">
+                                <i class="site-menu-icon fa-cubes" aria-hidden="true"></i>
+                                <span class="site-menu-title">进阶</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+
+                                <li class="site-menu-item">
+                                    <a href="/components/advanced/animation" target="_blank">
+                                        <span class="site-menu-title">动画</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/advanced/scrollbar" target="_blank">
+                                        <span class="site-menu-title">滚动条</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/advanced/rating" target="_blank">
+                                        <span class="site-menu-title">评分</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/advanced/context-menu" target="_blank">
+                                        <span class="site-menu-title">右键菜单</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/advanced/masonry" target="_blank">
+                                        <span class="site-menu-title">瀑布流布局</span>
+                                    </a>
+                                </li>
+
+
+
+                                <li class="site-menu-item has-sub">
+                                    <a href="javascript:;">
+                                        <span class="site-menu-title">树形控件</span>
+                                        <span class="site-menu-arrow"></span>
+                                    </a>
+                                    <ul class="site-menu-sub">
+                                        <li class="site-menu-item">
+                                            <a href="/components/advanced/tree/jstree" target="_blank">
+                                                <span class="site-menu-title">JsTree</span>
+                                            </a>
+                                        </li>
+                                        <li class="site-menu-item">
+                                            <a href="/components/advanced/tree/treeview" target="_blank">
+                                                <span class="site-menu-title">Treeview</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="site-menu-item">
+                                    <a href="/components/advanced/toastr" target="_blank">
+                                        <span class="site-menu-title">Toaster 通知</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/advanced/sortable-nestable" target="_blank">
+                                        <span class="site-menu-title">拖动排序</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:;">
+                                <i class="site-menu-icon fa-plug" aria-hidden="true"></i>
+                                <span class="site-menu-title">组件</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+
+                                <li class="site-menu-item">
+                                    <a href="/components/structure/alerts" target="_blank">
+                                        <span class="site-menu-title">警告框</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/structure/ribbon" target="_blank">
+                                        <span class="site-menu-title">彩带</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/structure/pricing-tables" target="_blank">
+                                        <span class="site-menu-title">价目表</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/structure/overlay" target="_blank">
+                                        <span class="site-menu-title">遮罩</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/structure/cover" target="_blank">
+                                        <span class="site-menu-title">覆盖层</span>
+                                    </a>
+                                </li>
+
+
+
+                                <li class="site-menu-item has-sub">
+                                    <a href="javascript:;">
+                                        <span class="site-menu-title">时间轴</span>
+                                        <span class="site-menu-arrow"></span>
+                                    </a>
+                                    <ul class="site-menu-sub">
+                                        <li class="site-menu-item">
+                                            <a href="/components/structure/timeline/simple" target="_blank">
+                                                <span class="site-menu-title">简单时间轴</span>
+                                            </a>
+                                        </li>
+                                        <li class="site-menu-item">
+                                            <a href="/components/structure/timeline/icons" target="_blank">
+                                                <span class="site-menu-title">图标时间轴</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="site-menu-item">
+                                    <a href="/components/structure/step" target="_blank">
+                                        <span class="site-menu-title">步骤条</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/structure/comments" target="_blank">
+                                        <span class="site-menu-title">评论</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/structure/media" target="_blank">
+                                        <span class="site-menu-title">媒体</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/structure/chat" target="_blank">
+                                        <span class="site-menu-title">聊天窗口</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/structure/testimonials" target="_blank">
+                                        <span class="site-menu-title">客户评价</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/structure/nav" target="_blank">
+                                        <span class="site-menu-title">导航</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/structure/navbars" target="_blank">
+                                        <span class="site-menu-title">导航条</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/structure/blockquotes" target="_blank">
+                                        <span class="site-menu-title">引用</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/structure/pagination" target="_blank">
+                                        <span class="site-menu-title">分页</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/structure/breadcrumbs" target="_blank">
+                                        <span class="site-menu-title">包屑导航</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:;">
+                                <i class="site-menu-icon fa-puzzle-piece" aria-hidden="true"></i>
+                                <span class="site-menu-title">卡片</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+
+                                <li class="site-menu-item">
+                                    <a href="/components/cards/statistics" target="_blank">
+                                        <span class="site-menu-title">统计</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/cards/data" target="_blank">
+                                        <span class="site-menu-title">数据</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/cards/blog" target="_blank">
+                                        <span class="site-menu-title">博客</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/cards/chart" target="_blank">
+                                        <span class="site-menu-title">图表</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/cards/social" target="_blank">
+                                        <span class="site-menu-title">社交</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/components/cards/weather" target="_blank">
+                                        <span class="site-menu-title">天气</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="tab-pane animation-fade h-full"
+                     id="admui-navTabsItem-11236" role="tabpanel">
+                    <ul class="site-menu">
+
+                        <li class="site-menu-category">页面示例</li>
+
+
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:;">
+                                <i class="site-menu-icon fa-home" aria-hidden="true"></i>
+                                <span class="site-menu-title">首页示例</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+
+                                <li class="site-menu-item">
+                                    <a href="/pages/home/index-v1" target="_blank">
+                                        <span class="site-menu-title">首页示例 01</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/pages/home/index-v2" target="_blank">
+                                        <span class="site-menu-title">首页示例 02</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/pages/home/ecommerce" target="_blank">
+                                        <span class="site-menu-title">电商网站型</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/pages/home/analytics" target="_blank">
+                                        <span class="site-menu-title">数据统计型</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/pages/home/team" target="_blank">
+                                        <span class="site-menu-title">团队协作型</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:;">
+                                <i class="site-menu-icon fa-files-o" aria-hidden="true"></i>
+                                <span class="site-menu-title">常用页面</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+
+                                <li class="site-menu-item">
+                                    <a href="/pages/general/blank" target="_blank">
+                                        <span class="site-menu-title">空白页面</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/pages/general/faq" target="_blank">
+                                        <span class="site-menu-title">帮助文档</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/pages/general/gallery-grid" target="_blank">
+                                        <span class="site-menu-title">相册</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/pages/general/search-result" target="_blank">
+                                        <span class="site-menu-title">搜索</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/pages/general/user" target="_blank">
+                                        <span class="site-menu-title">客户列表</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/pages/general/email" target="_blank">
+                                        <span class="site-menu-title">邮件模板</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/pages/general/code-editor" target="_blank">
+                                        <span class="site-menu-title">代码编辑器</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/errors" target="_blank">
+                                        <span class="site-menu-title">错误页面</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/errors/noauth" target="_blank">
+                                        <span class="site-menu-title">没有权限</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/errors/maintenance" target="_blank">
+                                        <span class="site-menu-title">网站维护中</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/locked" target="_blank">
+                                        <span class="site-menu-title">登录超时</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:;">
+                                <i class="site-menu-icon fa-group" aria-hidden="true"></i>
+                                <span class="site-menu-title">团队协作</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+
+                                <li class="site-menu-item">
+                                    <a href="/pages/team/calendar" target="_blank">
+                                        <span class="site-menu-title">日历</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/pages/team/notebook" target="_blank">
+                                        <span class="site-menu-title">笔记</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/pages/team/taskboard" target="_blank">
+                                        <span class="site-menu-title">任务看板</span>
+                                    </a>
+                                </li>
+
+
+
+                                <li class="site-menu-item has-sub">
+                                    <a href="javascript:;">
+                                        <span class="site-menu-title">知识库</span>
+                                        <span class="site-menu-arrow"></span>
+                                    </a>
+                                    <ul class="site-menu-sub">
+                                        <li class="site-menu-item">
+                                            <a href="/pages/team/documents/articles" target="_blank">
+                                                <span class="site-menu-title">列表</span>
+                                            </a>
+                                        </li>
+                                        <li class="site-menu-item">
+                                            <a href="/pages/team/documents/categories" target="_blank">
+                                                <span class="site-menu-title">分类</span>
+                                            </a>
+                                        </li>
+                                        <li class="site-menu-item">
+                                            <a href="/pages/team/documents/article" target="_blank">
+                                                <span class="site-menu-title">详情</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="site-menu-item">
+                                    <a href="/pages/team/forum" target="_blank">
+                                        <span class="site-menu-title">论坛</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/pages/team/message" target="_blank">
+                                        <span class="site-menu-title">即时通讯</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/pages/team/mailbox" target="_blank">
+                                        <span class="site-menu-title">邮箱</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/pages/team/media" target="_blank">
+                                        <span class="site-menu-title">文件管理</span>
+                                    </a>
+                                </li>
+
+
+
+                                <li class="site-menu-item has-sub">
+                                    <a href="javascript:;">
+                                        <span class="site-menu-title">项目</span>
+                                        <span class="site-menu-arrow"></span>
+                                    </a>
+                                    <ul class="site-menu-sub">
+                                        <li class="site-menu-item">
+                                            <a href="/pages/team/projects" target="_blank">
+                                                <span class="site-menu-title">项目列表 01</span>
+                                            </a>
+                                        </li>
+                                        <li class="site-menu-item">
+                                            <a href="/pages/team/work" target="_blank">
+                                                <span class="site-menu-title">项目列表 02</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="tab-pane animation-fade h-full"
+                     id="admui-navTabsItem-11230" role="tabpanel">
+                    <ul class="site-menu">
+
+                        <li class="site-menu-category">表格示例</li>
+
+                        <li class="site-menu-item">
+                            <a href="/tables/basic/index" target="_blank">
+                                <i class="site-menu-icon fa-table" aria-hidden="true"></i>
+                                <span class="site-menu-title">基本表格</span>
+                            </a>
+                        </li>
+
+
+                        <li class="site-menu-item">
+                            <a href="/tables/treegrid/index" target="_blank">
+                                <i class="site-menu-icon fa-bars" aria-hidden="true"></i>
+                                <span class="site-menu-title">树形表格</span>
+                            </a>
+                        </li>
+
+
+
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:;">
+                                <i class="site-menu-icon fa-list-alt" aria-hidden="true"></i>
+                                <span class="site-menu-title">DataTables</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+
+                                <li class="site-menu-item">
+                                    <a href="/tables/data-tables/basic-init/zero-configuration" target="_blank">
+                                        <span class="site-menu-title">基本初始化</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/tables/data-tables/advanced-init/events-live" target="_blank">
+                                        <span class="site-menu-title">高级初始化</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/tables/data-tables/data-sources/dom" target="_blank">
+                                        <span class="site-menu-title">数据源</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/tables/data-tables/api/add-row" target="_blank">
+                                        <span class="site-menu-title">API</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/tables/data-tables/ajax/simple" target="_blank">
+                                        <span class="site-menu-title">AJAX</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/tables/data-tables/server-side/simple" target="_blank">
+                                        <span class="site-menu-title">服务器模式</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/tables/data-tables/plug-ins/api" target="_blank">
+                                        <span class="site-menu-title">插件</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/tables/data-tables/others/fixed-header" target="_blank">
+                                        <span class="site-menu-title">其他</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:;">
+                                <i class="site-menu-icon fa-list-alt" aria-hidden="true"></i>
+                                <span class="site-menu-title">BootstrapTable</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+
+                                <li class="site-menu-item">
+                                    <a href="/tables/bootstrap-table/options/boolean-options" target="_blank">
+                                        <span class="site-menu-title">选项</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/tables/bootstrap-table/methods/getOptions" target="_blank">
+                                        <span class="site-menu-title">方法</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/tables/bootstrap-table/extensions/export" target="_blank">
+                                        <span class="site-menu-title">扩展</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="tab-pane animation-fade h-full"
+                     id="admui-navTabsItem-11239" role="tabpanel">
+                    <ul class="site-menu">
+
+                        <li class="site-menu-category">表单相关</li>
+
+                        <li class="site-menu-item">
+                            <a href="/forms/general" target="_blank">
+                                <i class="site-menu-icon fa-circle-o" aria-hidden="true"></i>
+                                <span class="site-menu-title">基本表单</span>
+                            </a>
+                        </li>
+
+
+                        <li class="site-menu-item">
+                            <a href="/forms/material" target="_blank">
+                                <i class="site-menu-icon fa-google" aria-hidden="true"></i>
+                                <span class="site-menu-title">质感风格</span>
+                            </a>
+                        </li>
+
+
+
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:;">
+                                <i class="site-menu-icon fa-toggle-off" aria-hidden="true"></i>
+                                <span class="site-menu-title">高级表单元素</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+
+                                <li class="site-menu-item">
+                                    <a href="/forms/advanced/select" target="_blank">
+                                        <span class="site-menu-title">下拉选择</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/forms/advanced/tags-input" target="_blank">
+                                        <span class="site-menu-title">标签输入</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/forms/advanced/date-time" target="_blank">
+                                        <span class="site-menu-title">日期时间</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/forms/advanced/checkbox-radio" target="_blank">
+                                        <span class="site-menu-title">复选框&amp;单选框</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/forms/advanced/color-icon" target="_blank">
+                                        <span class="site-menu-title">颜色&amp;图标</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/forms/advanced/other" target="_blank">
+                                        <span class="site-menu-title">其他</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+                        <li class="site-menu-item">
+                            <a href="/forms/layouts" target="_blank">
+                                <i class="site-menu-icon fa-indent" aria-hidden="true"></i>
+                                <span class="site-menu-title">表单布局</span>
+                            </a>
+                        </li>
+
+
+                        <li class="site-menu-item">
+                            <a href="/forms/wizard" target="_blank">
+                                <i class="site-menu-icon fa-arrow-right" aria-hidden="true"></i>
+                                <span class="site-menu-title">表单向导</span>
+                            </a>
+                        </li>
+
+
+                        <li class="site-menu-item">
+                            <a href="/forms/validation" target="_blank">
+                                <i class="site-menu-icon fa-check-square-o" aria-hidden="true"></i>
+                                <span class="site-menu-title">表单验证</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item">
+                            <a href="/forms/masks" target="_blank">
+                                <i class="site-menu-icon fa-at" aria-hidden="true"></i>
+                                <span class="site-menu-title">格式预设</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:;">
+                                <i class="site-menu-icon fa-list-alt" aria-hidden="true"></i>
+                                <span class="site-menu-title">编辑器</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+                                <li class="site-menu-item">
+                                    <a href="/forms/editor/summernote" target="_blank">
+                                        <span class="site-menu-title">文本编辑器</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a href="/forms/editor/markdown" target="_blank">
+                                        <span class="site-menu-title">Markdown编辑器</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a href="/forms/editor/ace" target="_blank">
+                                        <span class="site-menu-title">代码编辑器</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="site-menu-item">
+                            <a href="/forms/image-cropping" target="_blank">
+                                <i class="site-menu-icon fa-cut" aria-hidden="true"></i>
+                                <span class="site-menu-title">图片裁剪</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item">
+                            <a href="/forms/dropify" target="_blank">
+                                <i class="site-menu-icon fa-cloud-upload" aria-hidden="true"></i>
+                                <span class="site-menu-title">文件上传</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane animation-fade h-full"
+                     id="admui-navTabsItem-11240" role="tabpanel">
+                    <ul class="site-menu">
+                        <li class="site-menu-category">统计图表</li>
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:;">
+                                <i class="site-menu-icon fa-pie-chart" aria-hidden="true"></i>
+                                <span class="site-menu-title">简单图表</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+
+                                <li class="site-menu-item">
+                                    <a href="/charts/chartjs" target="_blank">
+                                        <span class="site-menu-title">Chart.js</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a href="/charts/gauges" target="_blank">
+                                        <span class="site-menu-title">Gauges</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a href="/charts/flot" target="_blank">
+                                        <span class="site-menu-title">Flot</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a href="/charts/peity" target="_blank">
+                                        <span class="site-menu-title">Peity</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a href="/charts/sparkline" target="_blank">
+                                        <span class="site-menu-title">Sparkline</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a href="/charts/morris" target="_blank">
+                                        <span class="site-menu-title">Morris</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a href="/charts/chartist" target="_blank">
+                                        <span class="site-menu-title">Chartist</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a href="/charts/rickshaw" target="_blank">
+                                        <span class="site-menu-title">Rickshaw</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a href="/charts/c3" target="_blank">
+                                        <span class="site-menu-title">C3</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="site-menu-item">
+                            <a href="/charts/echarts" target="_blank">
+                                <i class="site-menu-icon fa-area-chart" aria-hidden="true"></i>
+                                <span class="site-menu-title">百度 Echarts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane animation-fade h-full"
+                     id="admui-navTabsItem-11241" role="tabpanel">
+                    <ul class="site-menu">
+
+                        <li class="site-menu-category">菜单演示 01</li>
+
+
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:;">
+                                <i class="site-menu-icon fa-bars" aria-hidden="true"></i>
+                                <span class="site-menu-title">一级菜单</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+
+                                <li class="site-menu-item">
+                                    <a href="/examples/menu" target="_blank">
+                                        <span class="site-menu-title">二级菜单 01</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/examples/menu" target="_blank">
+                                        <span class="site-menu-title">二级菜单 02</span>
+                                    </a>
+                                </li>
+
+
+
+                                <li class="site-menu-item has-sub">
+                                    <a href="javascript:;">
+                                        <span class="site-menu-title">二级菜单 03</span>
+                                        <span class="site-menu-arrow"></span>
+                                    </a>
+                                    <ul class="site-menu-sub">
+                                        <li class="site-menu-item">
+                                            <a href="/examples/menu" target="_blank">
+                                                <span class="site-menu-title">三级菜单 001</span>
+                                            </a>
+                                        </li>
+                                        <li class="site-menu-item">
+                                            <a href="/examples/menu" target="_blank">
+                                                <span class="site-menu-title">三级菜单 002</span>
+                                            </a>
+                                        </li>
+                                        <li class="site-menu-item">
+                                            <a href="/examples/menu" target="_blank">
+                                                <span class="site-menu-title">三级菜单 003</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li class="site-menu-item">
+                            <a href="/examples/menu" target="_blank">
+                                <i class="site-menu-icon fa-bars" aria-hidden="true"></i>
+                                <span class="site-menu-title">独立菜单</span>
+                            </a>
+                        </li>
+
+
+
+                        <li class="site-menu-category">菜单演示 02</li>
+
+                        <li class="site-menu-item">
+                            <a href="/examples/menu" target="_blank">
+                                <i class="site-menu-icon fa-bars" aria-hidden="true"></i>
+                                <span class="site-menu-title">独立菜单</span>
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+                <div class="tab-pane animation-fade h-full"
+                     id="admui-navTabsItem-1" role="tabpanel">
+                    <ul class="site-menu">
+
+                        <li class="site-menu-category">系统信息</li>
+
+                        <li class="site-menu-item">
+                            <a href="/system/menu" target="_blank">
+                                <i class="site-menu-icon fa-bars" aria-hidden="true"></i>
+                                <span class="site-menu-title">菜单管理</span>
+                            </a>
+                        </li>
+
+
+                        <li class="site-menu-item">
+                            <a href="/system/organization" target="_blank">
+                                <i class="site-menu-icon fa-street-view" aria-hidden="true"></i>
+                                <span class="site-menu-title">组织机构</span>
+                            </a>
+                        </li>
+
+
+                        <li class="site-menu-item">
+                            <a href="/system/role" target="_blank">
+                                <i class="site-menu-icon fa-sliders" aria-hidden="true"></i>
+                                <span class="site-menu-title">角色管理</span>
+                            </a>
+                        </li>
+
+
+                        <li class="site-menu-item">
+                            <a href="/system/permission" target="_blank">
+                                <i class="site-menu-icon fa-user-secret" aria-hidden="true"></i>
+                                <span class="site-menu-title">权限管理</span>
+                            </a>
+                        </li>
+
+
+
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:;">
+                                <i class="site-menu-icon fa-gear" aria-hidden="true"></i>
+                                <span class="site-menu-title">系统设置</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+
+                                <li class="site-menu-item">
+                                    <a href="/system/settings/display" target="_blank">
+                                        <span class="site-menu-title">显示设置</span>
+                                    </a>
+                                </li>
+
+
+                                <li class="site-menu-item">
+                                    <a href="/system/settings/log" target="_blank">
+                                        <span class="site-menu-title">日志设置</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+                        <li class="site-menu-item">
+                            <a href="/system/log" target="_blank">
+                                <i class="site-menu-icon fa-file-text-o" aria-hidden="true"></i>
+                                <span class="site-menu-title">日志信息</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item">
+                            <a href="/system/blacklist" target="_blank">
+                                <i class="site-menu-icon fa-shield" aria-hidden="true"></i>
+                                <span class="site-menu-title">黑名单</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-category">我的账户</li>
+
+                        <li class="site-menu-item">
+                            <a href="/system/account" target="_blank">
+                                <i class="site-menu-icon fa-key" aria-hidden="true"></i>
+                                <span class="site-menu-title">账户信息</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="site-contabs" id="admui-siteConTabs">
+        <button type="button" class="btn btn-icon btn-default float-left hide" id="admui-tabL">
+            <i class="icon fa-angle-double-left"></i>
+        </button>
+        <div class="contabs-scroll float-left">
+            <ul class="nav con-tabs">
+                <li>
+                    <a href="/home/Table" target="iframe-0" title="首页"><span>首页</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="btn-group float-right">
+            <button type="button" class="btn btn-icon btn-default hide" id="admui-tabR">
+                <i class="icon fa-angle-double-right"></i>
+            </button>
+            <button type="button" class="btn btn-default dropdown-toggle btn-outline" data-toggle="dropdown"
+                    aria-expanded="false">
+                <span class="caret"></span> <span class="sr-only">切换菜单</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="conTabsDropdown" role="menu">
+                <a class="dropdown-item reload-page" href="javascript:;" role="menuitem"><i class="icon wb-reload"></i> 刷新当前</a>
+                <a class="dropdown-item close-other" href="javascript:;" role="menuitem"><i class="icon wb-close"></i> 关闭其他</a>
+                <a class="dropdown-item close-all" href="javascript:;" role="menuitem">
+                    <i class="icon wb-power"></i>
+                    关闭所有
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="site-page">
+        <div class="page-container" id="admui-pageContent">
+            <iframe src="" frameborder="0" name="iframe-0" class="page-frame animation-fade"></iframe>
+        </div>
+        <div class="page-loading vertical-align text-center">
+            <div class="page-loader loader-default loader vertical-align-middle" data-type="default"></div>
+        </div>
+    </main>
+
+    <footer class="site-footer"></footer>
+
+    <!-- 插件 -->
+    <script src="http://cdn.admui.com/demo/iframe/2.1.0/themes/global/js/plugins/responsive-tabs.js"></script>
+    <script src="http://cdn.admui.com/demo/iframe/2.1.0/vendor/toastr/toastr.min.js"></script>
+    <script src="http://cdn.admui.com/demo/iframe/2.1.0/vendor/ashoverscroll/jquery-asHoverScroll.min.js"></script>
+    <script src="http://cdn.admui.com/demo/iframe/2.1.0/vendor/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="http://cdn.admui.com/demo/iframe/2.1.0/vendor/screenfull/screenfull.min.js"></script>
+</body>
+</html>
