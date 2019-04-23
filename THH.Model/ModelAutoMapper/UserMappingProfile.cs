@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace THH.Model.ModelAutoMapper
 {
-    public class UserMappingProfile : Profile
+    public class UserMappingProfile// : Profile
     {
-        protected override void Configure()
-        {
-            //添加配置方法
+        //protected override void Configure()
+        //{
+        //    //添加配置方法
 
-        }
+        //}
     }
 }
