@@ -10,79 +10,79 @@ using THH.Web.Authorization;
 
 namespace THH.Web.BaseApplication
 {
-    public abstract class BootstrapWebViewPage<T> : System.Web.Mvc.WebViewPage<T>
-    {
-        //在cshtml页面里面使用的变量
-        public BootstrapHelper Bootstrap { get; set; }
+    //public abstract class BootstrapWebViewPage<T> : System.Web.Mvc.WebViewPage<T>
+    //{
+    //    //在cshtml页面里面使用的变量
+    //    public BootstrapHelper Bootstrap { get; set; }
 
-        /// <summary>
-        /// 初始化Bootstrap对象
-        /// </summary>
-        public override void InitHelpers()
-        {
-            base.InitHelpers();
-            Bootstrap = new BootstrapHelper(ViewContext, this);
-        }
+    //    /// <summary>
+    //    /// 初始化Bootstrap对象
+    //    /// </summary>
+    //    public override void InitHelpers()
+    //    {
+    //        base.InitHelpers();
+    //        Bootstrap = new BootstrapHelper(ViewContext, this);
+    //    }
 
-        public override void Execute()
-        {
-            //throw new NotImplementedException();
-        }
-    }
-    public class BootstrapHelper : System.Web.Mvc.HtmlHelper
-    {
-        /// <summary>
-        /// 使用指定的视图上下文和视图数据容器来初始化 BootstrapHelper 类的新实例。
-        /// </summary>
-        /// <param name="viewContext">视图上下文</param>
-        /// <param name="viewDataContainer">视图数据容器</param>
-        public BootstrapHelper(ViewContext viewContext, IViewDataContainer viewDataContainer)
-            : base(viewContext, viewDataContainer)
-        { }
+    //    public override void Execute()
+    //    {
+    //        //throw new NotImplementedException();
+    //    }
+    //}
+    //public class BootstrapHelper : System.Web.Mvc.HtmlHelper
+    //{
+    //    /// <summary>
+    //    /// 使用指定的视图上下文和视图数据容器来初始化 BootstrapHelper 类的新实例。
+    //    /// </summary>
+    //    /// <param name="viewContext">视图上下文</param>
+    //    /// <param name="viewDataContainer">视图数据容器</param>
+    //    public BootstrapHelper(ViewContext viewContext, IViewDataContainer viewDataContainer)
+    //        : base(viewContext, viewDataContainer)
+    //    { }
 
-        /// <summary>
-        /// 使用指定的视图上下文、视图数据容器和路由集合来初始化 BootstrapHelper 类的新实例。
-        /// </summary>
-        /// <param name="viewContext">视图上下文</param>
-        /// <param name="viewDataContainer">视图数据容器</param>
-        /// <param name="routeCollection">路由集合</param>
-        public BootstrapHelper(ViewContext viewContext, IViewDataContainer viewDataContainer, RouteCollection routeCollection)
-            : base(viewContext, viewDataContainer, routeCollection)
-        { }
-    }
-    public static class LabelExtensions
-    {
-        /// <summary>
-        /// 通过使用指定的 HTML 帮助器和窗体字段的名称，返回Label标签
-        /// </summary>
-        /// <param name="html">扩展方法实例</param>
-        /// <param name="id">标签的id</param>
-        /// <param name="content">标签的内容</param>
-        /// <param name="cssClass">标签的class样式</param>
-        /// <param name="htmlAttributes">标签的额外属性（如果属性里面含有“-”，请用“_”代替）</param>
-        /// <returns>label标签的html字符串</returns>
-        public static MvcHtmlString Label(this BootstrapHelper html, string id, string content, string cssClass, object htmlAttributes)
-        {
-            //定义标签的名称
-            TagBuilder tag = new TagBuilder("label");
-            //给标签增加额外的属性
-            IDictionary<string, object> attributes = BootstrapHelper.AnonymousObjectToHtmlAttributes(htmlAttributes);
-            if (!string.IsNullOrEmpty(id))
-            {
-                attributes.Add("id", id);
-            }
-            if (!string.IsNullOrEmpty(cssClass))
-            {
-                //给标签增加样式
-                tag.AddCssClass(cssClass);
-            }
-            //给标签增加文本
-            tag.SetInnerText(content);
-            tag.AddCssClass("control-label");
-            tag.MergeAttributes(attributes);
-            return MvcHtmlString.Create(tag.ToString());
-        }
-    }
+    //    /// <summary>
+    //    /// 使用指定的视图上下文、视图数据容器和路由集合来初始化 BootstrapHelper 类的新实例。
+    //    /// </summary>
+    //    /// <param name="viewContext">视图上下文</param>
+    //    /// <param name="viewDataContainer">视图数据容器</param>
+    //    /// <param name="routeCollection">路由集合</param>
+    //    public BootstrapHelper(ViewContext viewContext, IViewDataContainer viewDataContainer, RouteCollection routeCollection)
+    //        : base(viewContext, viewDataContainer, routeCollection)
+    //    { }
+    //}
+    //public static class LabelExtensions
+    //{
+    //    /// <summary>
+    //    /// 通过使用指定的 HTML 帮助器和窗体字段的名称，返回Label标签
+    //    /// </summary>
+    //    /// <param name="html">扩展方法实例</param>
+    //    /// <param name="id">标签的id</param>
+    //    /// <param name="content">标签的内容</param>
+    //    /// <param name="cssClass">标签的class样式</param>
+    //    /// <param name="htmlAttributes">标签的额外属性（如果属性里面含有“-”，请用“_”代替）</param>
+    //    /// <returns>label标签的html字符串</returns>
+    //    public static MvcHtmlString Label(this BootstrapHelper html, string id, string content, string cssClass, object htmlAttributes)
+    //    {
+    //        //定义标签的名称
+    //        TagBuilder tag = new TagBuilder("label");
+    //        //给标签增加额外的属性
+    //        IDictionary<string, object> attributes = BootstrapHelper.AnonymousObjectToHtmlAttributes(htmlAttributes);
+    //        if (!string.IsNullOrEmpty(id))
+    //        {
+    //            attributes.Add("id", id);
+    //        }
+    //        if (!string.IsNullOrEmpty(cssClass))
+    //        {
+    //            //给标签增加样式
+    //            tag.AddCssClass(cssClass);
+    //        }
+    //        //给标签增加文本
+    //        tag.SetInnerText(content);
+    //        tag.AddCssClass("control-label");
+    //        tag.MergeAttributes(attributes);
+    //        return MvcHtmlString.Create(tag.ToString());
+    //    }
+    //}
     public static class HtmlHelperExtend 
     {
         public static MvcHtmlString LabelFor(this HtmlHelper html, string lableName, string labelFor)

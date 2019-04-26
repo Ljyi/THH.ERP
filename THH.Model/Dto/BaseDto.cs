@@ -32,5 +32,7 @@ namespace THH.Model.Dto
         /// 更新时间
         /// </summary>
         public DateTime? UpdateTime { get; set; }
+
+
     }
 }

@@ -1,11 +1,11 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using THH.DAL;
 using THH.DAL.Repository;
 using THH.Model;
+using THH.Model.Dto;
 
 namespace THH.Service
 {
@@ -27,9 +27,15 @@ namespace THH.Service
         {
             return userRepository.Find(id);
         }
-        public User Find()
+        public UserDto Find()
         {
-            return userRepository.Entities.FirstOrDefault();
+            //Mapper.Initialize(cfg =>
+            //{
+            //    cfg.AllowNullCollections = true;
+            //    cfg.CreateMap<User, UserDto>();
+            //});
+            User user = userRepository.Entities.FirstOrDefault();
+            return Mapper.Map<User, UserDto>(user);
         }
         public void Add()
         {

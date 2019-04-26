@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using THH.DAL;
 using THH.DAL.Repository;
 using THH.Model;
@@ -17,12 +15,6 @@ namespace THH.Service
         public UserRoleService()
         {
             userRoleRepository = new RepositoryBase<UserRole>();
-            //第一步初始化
-            Mapper.Initialize(cfg =>
-            {
-                cfg.AllowNullCollections = true;
-                cfg.CreateMap<UserRole, UserRoleDto>();
-            });
         }
         public void Add()
         {
