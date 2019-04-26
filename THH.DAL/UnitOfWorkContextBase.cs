@@ -45,6 +45,15 @@ namespace THH.DAL
             {
                 int result = Context.SaveChanges();
                 IsCommitted = true;
+                Context.Database.Log = (sql) =>
+                {
+                    if (string.IsNullOrEmpty(sql) == false)
+                    {
+                        Console.WriteLine("************sql执行*************");
+                        Console.WriteLine(sql);
+                        Console.WriteLine("************sql结束************");
+                    }
+                };
                 return result;
             }
             catch (DbUpdateException e)

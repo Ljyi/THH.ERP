@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{CE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{F3F2CBCF-0EFC-4986-AB7F-1C0B4FF60EA2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THH.Repository", "THH.IRepository\THH.Repository.csproj", "{4C05C0CD-2A30-4EEB-B556-75F347C27A5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{F3F2CBCF-0EFC-4986-AB7F-1C0B4FF60EA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3F2CBCF-0EFC-4986-AB7F-1C0B4FF60EA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3F2CBCF-0EFC-4986-AB7F-1C0B4FF60EA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C05C0CD-2A30-4EEB-B556-75F347C27A5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C05C0CD-2A30-4EEB-B556-75F347C27A5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C05C0CD-2A30-4EEB-B556-75F347C27A5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C05C0CD-2A30-4EEB-B556-75F347C27A5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

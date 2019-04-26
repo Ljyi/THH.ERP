@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using THH.DAL;
 using THH.DAL.Repository;
 using THH.Model;

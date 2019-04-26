@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using THH.DAL;
@@ -12,11 +11,13 @@ namespace THH.Service
     public class UserService
     {
         private IRepository<User> userRepository = null;
+        private IRepository<Role> roleRepository = null;
         public bool isSave = true;
 
         public UserService()
         {
             userRepository = new RepositoryBase<User>();
+            roleRepository = new RepositoryBase<Role>();
         }
 
         public List<User> GetUsers()
@@ -37,38 +38,44 @@ namespace THH.Service
             User user = userRepository.Entities.FirstOrDefault();
             return Mapper.Map<User, UserDto>(user);
         }
-        public void Add()
+
+        public List<UserDto> GetUserGrid(int limit, int offset, string userName, string loginName)
         {
-            try
-            {
-                List<User> userList = new List<User>() {
-                new User()
-                {
-                    Email = "979671716@qq.com",
-                    LogingName = "ljy",
-                    Password = "123",
-                    UserName = "李军毅",
-                    CreateUser = "李军毅",
-                    CredateTime = DateTime.Now
-                },
-                new User()
-                {
-                    Email = "979671716@qq.com",
-                    LogingName = "Admin",
-                    Password = "123456",
-                    UserName = "管理员",
-                    CreateUser = "李军毅",
-                    CredateTime = DateTime.Now
-                },
-            };
-                userRepository.Insert(userList);
-            }
-            catch (Exception ex)
-            {
-                string msg = ex.Message;
-                throw;
-            }
+            var user = userRepository.Entities.ToList();
+            return Mapper.Map<List<User>, List<UserDto>>(user);
         }
+        //public void Add()
+        //{
+        //    try
+        //    {
+        //        List<User> userList = new List<User>() {
+        //        new User()
+        //        {
+        //            Email = "979671716@qq.com",
+        //            LogingName = "ljy",
+        //            Password = "123",
+        //            UserName = "李军毅",
+        //            CreateUser = "李军毅",
+        //            CredateTime = DateTime.Now
+        //        },
+        //        new User()
+        //        {
+        //            Email = "979671716@qq.com",
+        //            LogingName = "Admin",
+        //            Password = "123456",
+        //            UserName = "管理员",
+        //            CreateUser = "李军毅",
+        //            CredateTime = DateTime.Now
+        //        },
+        //    };
+        //        userRepository.Insert(userList);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        string msg = ex.Message;
+        //        throw;
+        //    }
+        //}
         public User Login(string loginName, string password)
         {
             return new User();

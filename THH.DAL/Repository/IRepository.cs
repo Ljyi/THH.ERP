@@ -80,6 +80,27 @@ namespace THH.DAL.Repository
         /// <param name="isSave"> 是否执行保存 </param>
         /// <returns> 操作影响的行数 </returns>
         int Update(TEntity entity, bool isSave = true);
+        /// <summary>
+        /// 批量插入
+        /// </summary>
+        /// <param name="entities"></param>
+        /// <param name="isSave"></param>
+        /// <returns></returns>
+        int BulkInsert(IEnumerable<TEntity> entities, bool isSave = true);
+        /// <summary>
+        /// 批量更新
+        /// </summary>
+        /// <param name="entities"></param>
+        /// <param name="isSave"></param>
+        /// <returns></returns>
+        int BulkUpdate(IEnumerable<TEntity> entities, bool isSave = true);
+        /// <summary>
+        /// 批量删除
+        /// </summary>
+        /// <param name="entities"></param>
+        /// <param name="isSave"></param>
+        /// <returns></returns>
+        int BulkDalate(IEnumerable<TEntity> entities, bool isSave = true);
 
         /// <summary>
         ///查找指定主键的实体记录

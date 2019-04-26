@@ -149,7 +149,6 @@ namespace THH.DAL
             return EFContext.Set<TEntity>().Find(key);
         }
         #endregion
-
         /// <summary>
         /// 异步操作
         /// </summary>
@@ -166,6 +165,36 @@ namespace THH.DAL
         public async Task<int> DeleteAsync(TEntity entity)
         {
             return await EFContext.SaveChangesAsync<TEntity>(entity, EntityState.Deleted);
+        }
+        /// <summary>
+        ///批量插入
+        /// </summary>
+        /// <param name="entities"></param>
+        /// <param name="isSave"></param>
+        /// <returns></returns>
+        public int BulkInsert(IEnumerable<TEntity> entities, bool isSave = true)
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// 批量更新
+        /// </summary>
+        /// <param name="entities"></param>
+        /// <param name="isSave"></param>
+        /// <returns></returns>
+        public int BulkUpdate(IEnumerable<TEntity> entities, bool isSave = true)
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// 批量删除
+        /// </summary>
+        /// <param name="entities"></param>
+        /// <param name="isSave"></param>
+        /// <returns></returns>
+        public int BulkDalate(IEnumerable<TEntity> entities, bool isSave = true)
+        {
+            throw new NotImplementedException();
         }
     }
 }

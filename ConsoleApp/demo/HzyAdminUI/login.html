@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN" style="overflow: hidden;">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <!-- 360浏览器默认使用Webkit内核 -->
+    <meta name="renderer" content="webkit">
+    <!-- 禁止百度SiteAPP转码 -->
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <title>HzyUI</title>
+    <!--[if lt IE 9]>
+      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+      <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--外部css-->
+    <link href="css/core.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="libs/web-icons-master/css/web-icons.css" rel="stylesheet" />
+    <!--my css-->
+    <link href="css/main.css" rel="stylesheet" />
+    <style type="text/css">
+        #hzy-login {
+            background: url(img/login.jpg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="hzy-login" class="animated fadeIn">
+        <div class="login-modal">
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="login-panel">
+                    <h1 class="text-center">HzyAdmin后台管理系统</h1>
+
+                    <div class="container-fluid">
+
+                        <div class="pt-50">
+
+                            <div class="form-group form-material">
+                                <label class="col-form-label" for="uName">帐户名</label>
+                                <input type="text" class="form-control" id="uName" name="uName" placeholder="请输入帐户名">
+                            </div>
+
+                            <div class="form-group form-material">
+                                <label class="col-form-label" for="uName">密码</label>
+                                <input type="text" class="form-control" id="uName" name="uName" placeholder="请输入密码">
+                            </div>
+
+                            <div class="form-group form-material">
+                                <label class="col-form-label" for="inputAddons">验证码</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="loginCode" placeholder="请输入验证码">
+                                    <div class="input-group-append">
+                                        <img class="yzm" src="http://www.suiyu.org.cn/Admin/Login/yzm" onclick="$(this).attr('src','http://www.suiyu.org.cn/Admin/Login/yzm'+'/'+new Date().getTime());"
+                                            width="100" style="height: 31px; border-bottom: 1px solid #e4eaec;">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <a class="btn btn-block btn-primary btn-lg mt-60" href="main.html">登录</a>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="libs/jquery/jquery-3.2.1.min.js"></script>
+    <script src="libs/bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+    <script src="libs/bootstrap-4.1.3-dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
