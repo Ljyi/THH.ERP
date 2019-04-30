@@ -1,416 +1,255 @@
-﻿@*@model  THH.Model.Dto.UserDto*@
+﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "THH 管理系统";
+    var MainPage = "/System/Home/Main/";
 }
-@{
-    Layout = null;
-}
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>测试前端框架</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <link href="" rel="stylesheet">
-    <script type="text/javascript" src="~/Content/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="~/Content/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="~/Content/dist/js/adminlte.min.js"></script>
-
-
-    <link rel="stylesheet" type="text/css" href="~/Content/dist/css/AdminLTE.min.css">
-    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="~/Content/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="~/Content/Ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" type="text/css" href="~/Content/dist/css/skins/skin-blue.min.css">
-</head>
-<body class="hold-transition skin-blue sidebar-mini">
-    <div class="wrapper">
-
-        <!-- Main Header -->
-        <header class="main-header">
-
-            <!-- Logo -->
-            <a href="#" class="logo">
-                <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini"><b>A</b>LT</span>
-                <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg"><b>THH</b>CRM</span>
-            </a>
-
-            <!-- Header Navbar -->
-            <nav class="navbar navbar-static-top" role="navigation">
-                <!-- Sidebar toggle button-->
-                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-                    <span class="sr-only">Toggle navigation</span>
-                </a>
-                <!-- Navbar Right Menu -->
-                <div class="navbar-custom-menu">
-                    <ul class="nav navbar-nav">
-                        <!-- Messages: style can be found in dropdown.less-->
-                        <li class="dropdown messages-menu">
-                            <!-- Menu toggle button -->
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-envelope-o"></i>
-                                <span class="label label-success">4</span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="header">You have 4 messages</li>
-                                <li>
-                                    <!-- inner menu: contains the messages -->
-                                    <ul class="menu">
-                                        <li>
-                                            <!-- start message -->
-                                            <a href="#">
-                                                <div class="pull-left">
-                                                    <!-- User Image -->
-                                                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                                                </div>
-                                                <!-- Message title and timestamp -->
-                                                <h4>
-                                                    Support Team
-                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                                                </h4>
-                                                <!-- The message -->
-                                                <p>Why not buy a new awesome theme?</p>
-                                            </a>
-                                        </li>
-                                        <!-- end message -->
-                                    </ul>
-                                    <!-- /.menu -->
-                                </li>
-                                <li class="footer"><a href="#">See All Messages</a></li>
-                            </ul>
-                        </li>
-                        <!-- /.messages-menu -->
-                        <!-- Notifications Menu -->
-                        <li class="dropdown notifications-menu">
-                            <!-- Menu toggle button -->
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-bell-o"></i>
-                                <span class="label label-warning">10</span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="header">You have 10 notifications</li>
-                                <li>
-                                    <!-- Inner Menu: contains the notifications -->
-                                    <ul class="menu">
-                                        <li>
-                                            <!-- start notification -->
-                                            <a href="#">
-                                                <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                                            </a>
-                                        </li>
-                                        <!-- end notification -->
-                                    </ul>
-                                </li>
-                                <li class="footer"><a href="#">View all</a></li>
-                            </ul>
-                        </li>
-                        <!-- Tasks Menu -->
-                        <li class="dropdown tasks-menu">
-                            <!-- Menu Toggle Button -->
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-flag-o"></i>
-                                <span class="label label-danger">9</span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="header">You have 9 tasks</li>
-                                <li>
-                                    <!-- Inner menu: contains the tasks -->
-                                    <ul class="menu">
-                                        <li>
-                                            <!-- Task item -->
-                                            <a href="#">
-                                                <!-- Task title and progress text -->
-                                                <h3>
-                                                    Design some buttons
-                                                    <small class="pull-right">20%</small>
-                                                </h3>
-                                                <!-- The progress bar -->
-                                                <div class="progress xs">
-                                                    <!-- Change the css width attribute to simulate progress -->
-                                                    <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
-                                                         aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                        <span class="sr-only">20% Complete</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <!-- end task item -->
-                                    </ul>
-                                </li>
-                                <li class="footer">
-                                    <a href="#">View all tasks</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <!-- User Account Menu -->
-                        <li class="dropdown user user-menu">
-                            <!-- Menu Toggle Button -->
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <!-- The user image in the navbar-->
-                                <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                                <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                                <span class="hidden-xs">Alexander Pierce</span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <!-- The user image in the menu -->
-                                <li class="user-header">
-                                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
-                                    <p>
-                                        Alexander Pierce - Web Developer
-                                        <small>Member since Nov. 2012</small>
-                                    </p>
-                                </li>
-                                <!-- Menu Body -->
-                                <li class="user-body">
-                                    <div class="row">
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Followers</a>
-                                        </div>
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Sales</a>
-                                        </div>
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Friends</a>
-                                        </div>
-                                    </div>
-                                    <!-- /.row -->
-                                </li>
-                                <!-- Menu Footer-->
-                                <li class="user-footer">
-                                    <div class="pull-left">
-                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
-                                    </div>
-                                    <div class="pull-right">
-                                        <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <!-- Control Sidebar Toggle Button -->
-                        <li>
-                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <!-- Left side column. contains the logo and sidebar -->
-        <aside class="main-sidebar">
-
-            <!-- sidebar: style can be found in sidebar.less -->
-            <section class="sidebar">
-
-                <!-- Sidebar user panel (optional) -->
-                <div class="user-panel">
-                    @*<div class="pull-left image">
-                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                    </div>*@
-                    @*<div class="pull-left info">
-                        <p>Alexander Pierce</p>
-                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-                    </div>*@
-                </div>
-
-                <!-- search form (Optional) -->
-                @*<form action="#" method="get" class="sidebar-form">
-                        <div class="input-group">
-                            <input type="text" name="q" class="form-control" placeholder="Search...">
-                            <span class="input-group-btn">
-                                <button type="submit" name="search" id="search-btn" class="btn btn-flat">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                        </div>
-                    </form>*@
-                <!-- /.search form -->
-                <!-- Sidebar Menu -->
-                <ul class="sidebar-menu" data-widget="tree">
-                    <li class="header">HEADER</li>
-                    <!-- Optionally, you can add icons to the links -->
-                    <li class="active"><a href="http://www.baidu.com"><i class="fa fa-link"></i> <span>百度</span></a></li>
-                    <li><a href="/home/index"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-link"></i> <span>Multilevel</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
+<div id="hzy-container" class="animated fadeIn">
+    <header class="index-skin-primary">
+        <div class="hzy-header-pc hidden-sm-down">
+            <div class="hzy-header-left hzy-left">
+                <ul>
+                    <li class="hzy-header-btn hzy-headerhover" onclick="hzy.menu.toggle(this);" title="左侧菜单/收缩" data-toggle="tooltip" data-placement="bottom"><a href="javascript:void(0)"><i class="fa fa-bars"></i></a></li>
+                    <li class="hzy-header-btn hzy-headerhover hzy-logo" title="Logo" data-toggle="tooltip" data-placement="bottom"><a href="javascript:void(0)" class="pl-15 pr-15">@ViewBag.Title</a></li>
+                </ul>
+            </div>
+            <div class="hzy-header-right hzy-right">
+                <ul>
+                    <li class="hzy-header-btn hzy-headerhover" onclick="hzy.tabs.refreshThisTab()" title="刷新" data-toggle="tooltip" data-placement="bottom"><a href="javascript:void(0)"><i class="fa fa-rotate-right"></i></a></li>
+                    <li class="hzy-header-btn hzy-headerhover" title="换肤" data-toggle="tooltip" data-placement="bottom" onclick="$('#examplePositionSidebar').modal()"><a href="javascript:void(0)"><i class="fa fa-th"></i></a></li>
+                    <!--缩小 图标 wb-contract-->
+                    <li class="hzy-header-btn hzy-headerhover" onclick="hzy.fullScreen.handleFullScreen(this);" title="全屏" data-toggle="tooltip" data-placement="bottom"><a href="javascript:void(0)"><i class="wb-expand"></i></a></li>
+                    <li class="hzy-header-btn hzy-headerhover"><a href="/Admin/Login/Out" title="退出系统" data-toggle="tooltip" data-placement="bottom"><span>登录人：&nbsp;ljy&nbsp;&nbsp;</span><i class="fa fa-sign-out"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="hzy-header-mobile">
+            <ul>
+                <li class="hzy-header-btn hzy-headerhover" onclick="hzy.menu.toggle(this)"><a href="javascript:void(0)" class="pl-15 pr-15"><i class="fa fa-bars"></i></a></li>
+                <li class="hzy-header-btn hzy-headerhover hzy-logo"><a href="javascript:void(0)" class="pl-15 pr-15">@ViewBag.Title</a></li>
+                <li class="hzy-header-btn hzy-headerhover pull-right"><a href="/Admin/Login/Out" class="pl-15 pr-15"><i class="fa fa-sign-out"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <nav class="hzy-navMenu hzy-navMenu-width220">
+            <div class="hzy-navMenu-sidebar sidebar-nav">
+                <ul class="metismenu" id="menu">
+                    <li>
+                        <a href="javascript:void(0)" hzy-router-href="*" hzy-router-text="首页" class="has-first-menu active">
+                            <i class="fa fa-fw fa-home fa-lg"></i>&nbsp;&nbsp;<span>首页</span>
                         </a>
-                        <ul class="treeview-menu">
-                            <li><a href="#">Link in level 2</a></li>
-                            <li><a href="#">Link in level 2</a></li>
+                    </li>
+                    <li>
+                        <a class="has-arrow has-first-menu" href="javascript:void(0)" aria-expanded="true"><i class="fa fa-desktop fa-lg"></i>&nbsp;&nbsp;<span>系统管理</span></a>
+                        <ul aria-expanded="true" class="collapse in" style="">
+                            <li><a href="javascript:void(0);var url='/System/User/Index';" hzy-router-href="/System/User/Index" hzy-router-text="用户管理" class="active"><i class=""></i>&nbsp;&nbsp;<span>用户管理</span></a></li>
+                            <li><a href="javascript:void(0);var url='/System/Role/Index';" hzy-router-href="/System/Role/Index" hzy-router-text="角色管理" class=""><i class=""></i>&nbsp;&nbsp;<span>角色管理</span></a></li>
+                            <li><a href="javascript:void(0);var url='/Admin/Function/Index';" hzy-router-href="/Admin/Function/Index" hzy-router-text="功能管理" class=""><i class=""></i>&nbsp;&nbsp;<span>功能管理</span></a></li>
+                            <li><a href="javascript:void(0);var url='/System/Menu/Index';" hzy-router-href="/System/Menu/Index" hzy-router-text="菜单功能" class=""><i class=""></i>&nbsp;&nbsp;<span>菜单功能</span></a></li>
+                            <li><a href="javascript:void(0);var url='/Admin/RoleFunction/Index';" hzy-router-href="/Admin/RoleFunction/Index" hzy-router-text="角色功能" class=""><i class=""></i>&nbsp;&nbsp;<span>角色功能</span></a></li>
+                            <li><a href="javascript:void(0);var url='/System/Button/Index';" hzy-router-href="/System/Button/Index" hzy-router-text="按钮管理" class=""><i class=""></i>&nbsp;&nbsp;<span>按钮管理</span></a></li>
+                            <li><a href="javascript:void(0);var url='/Home/BootStrapTable';" hzy-router-href="/Home/BootStrapTable" hzy-router-text="修改密码" class=""><i class=""></i>&nbsp;&nbsp;<span>修改密码</span></a></li>
                         </ul>
                     </li>
+                    <li>
+                        <a class="has-arrow has-first-menu" href="javascript:void(0)" aria-expanded="true"><i class="fa fa-desktop fa-lg"></i>&nbsp;&nbsp;<span>商品管理</span></a>
+                        <ul aria-expanded="true" class="collapse in" style="">
+                            <li>
+                                <a href="javascript:void(0);var url='/Product/Product/Index';" hzy-router-href="/Product/Product/Index" hzy-router-text="商品列表">
+                                    <i class=""></i>&nbsp;&nbsp;<span>商品列表</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow has-first-menu" href="javascript:void(0)" aria-expanded="true"><i class="fa fa-desktop fa-lg"></i>&nbsp;&nbsp;<span>订单管理</span></a>
+                        <ul aria-expanded="true" class="collapse in" style="">
+                            <li>
+                                <a href="javascript:void(0);var url='/Order/Order/Index';" hzy-router-href="/Order/Order/Index" hzy-router-text="订单列表">
+                                    <i class=""></i>&nbsp;&nbsp;<span>订单列表</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow has-first-menu" href="javascript:void(0)" aria-expanded="true"><i class="fa fa-desktop fa-lg"></i>&nbsp;&nbsp;<span>设备管理</span></a>
+                        <ul aria-expanded="true" class="collapse in" style="">
+                            <li>
+                                <a href="javascript:void(0);var url='/Machine/Machine/Index';" hzy-router-href="/Machine/Machine/Index" hzy-router-text="设备列表">
+                                    <i class=""></i>&nbsp;&nbsp;<span>设备列表</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow has-first-menu" href="javascript:void(0)" aria-expanded="true"><i class="fa fa-desktop fa-lg"></i>&nbsp;&nbsp;<span>库存管理</span></a>
+                        <ul aria-expanded="true" class="collapse in" style="">
+                            <li>
+                                <a href="javascript:void(0);var url='/Stock/Stock/Index';" hzy-router-href="/Stock/Stock/Index" hzy-router-text="库存列表">
+                                    <i class=""></i>&nbsp;&nbsp;<span>库存列表</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow has-first-menu" href="javascript:void(0)" aria-expanded="true"><i class="fa fa-desktop fa-lg"></i>&nbsp;&nbsp;<span>广告管理</span></a>
+                        <ul aria-expanded="true" class="collapse in" style="">
+                            <li>
+                                <a href="javascript:void(0);var url='/AdvertiseMent/AdvertiseMent/Index';" hzy-router-href="/AdvertiseMent/AdvertiseMent/Index" hzy-router-text="广告列表">
+                                    <i class=""></i>&nbsp;&nbsp;<span>广告列表</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a class="has-arrow has-first-menu" href="javascript:void(0)" aria-expanded="true"><i class="fa fa-desktop fa-lg"></i>&nbsp;&nbsp;<span>日志管理</span></a>
+                        <ul aria-expanded="true" class="collapse in" style="">
+                            <li><a href="javascript:void(0);var url='/System/User/Index';" hzy-router-href="/System/User/Index" hzy-router-text="日志" class="active"><i class=""></i>&nbsp;&nbsp;<span>用户管理</span></a></li>
+                        </ul>
+                    </li>
+
                 </ul>
-                <!-- /.sidebar-menu -->
-            </section>
-            <!-- /.sidebar -->
-        </aside>
-
-        <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <section class="content-header">
-                <h1>
-                    Page Header
-                    <small>Optional description</small>
-                </h1>
-                @*<ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-                    <li class="active">Here</li>
-                </ol>*@
-            </section>
-
-            <!-- Main content -->
-            <section class="content container-fluid">
-                @*<h4>hello boy</h4>
-                    <div>
-                        <button class="btn btn-success btn-flat"><span class="glyphicon glyphicon-ok">&nbsp;</span>保存</button>
+            </div>
+        </nav>
+        <content class="hzy-left220">
+            <nav class="hzy-navTab">
+                <div class="hzy-navTab-left" onclick="hzy.tabs.leftMove()"><i class="fa fa-chevron-left"></i></div>
+                <div class="hzy-navTab-center">
+                    <ul class="list-unstyled list-inline">
+                        <li class="hzy-navTab-li active" title="首页"><a href="javascript:void(0)" hzy-router-href="*" hzy-router-text="首页"><span>首页</span></a></li>
+                        <!--<li class="hzy-navTab-li"><a><span>会员列表</span></a><i class="fa fa-close" onclick="hzy.tabs.close(event,$(this).parent().parent())"></i></li>-->
+                    </ul>
+                </div>
+                <div class="hzy-navTab-right" onclick="hzy.tabs.rightMove()"><i class="fa fa-chevron-right"></i></div>
+                <div class="btn-group dropdown pull-left" style="height:100%;" id="hzy-tools">
+                    <button type="button" class="btn btn-outline btn-default dropdown-toggle height-full hzy-navTab-more"
+                            id="exampleBulletDropdown2" data-toggle="dropdown" aria-expanded="false"></button>
+                    <div class="dropdown-menu dropdown-menu-bullet dropdown-menu-right" aria-labelledby="exampleBulletDropdown2"
+                         role="menu" x-placement="bottom-end">
+                        <a class="dropdown-item" href="javascript:;" role="menuitem" onclick="hzy.tabs.removeOtherTab()">
+                            <i class="fa fa-close"></i> 关闭其他
+                        </a>
+                        <a class="dropdown-item" href="javascript:;" role="menuitem" onclick="hzy.tabs.removeAllTab()">
+                            <i class="fa fa-power-off"></i>
+                            关闭所有
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="javascript:;" role="menuitem" onclick="hzy.tabs.refreshThisTab()">
+                            <i class="fa fa-repeat"></i> 刷新当前
+                        </a>
                     </div>
-                    <hr />
-                    <div>
-                        <!-- Horizontal Form -->
-                        <div class="box box-info">
-                            <div class="box-header with-border">
-                                <h3 class="box-title">Horizontal Form</h3>
-                            </div>
-                            <!-- /.box-header -->
-                            <!-- form start -->
-                            <form class="form-horizontal">
-                                <div class="box-body">
-                                    <div class="form-group">
-                                        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-
-                                        <div class="col-sm-10">
-                                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-
-                                        <div class="col-sm-10">
-                                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-offset-2 col-sm-10">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Remember me
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.box-body -->
-                                <div class="box-footer">
-                                    <button type="submit" class="btn btn-default">Cancel</button>
-                                    <button type="submit" class="btn btn-info pull-right">Sign in</button>
-                                </div>
-                                <!-- /.box-footer -->
-                            </form>
-                        </div>
-                        <!-- /.box -->
-                    </div>*@
-                <!--------------------------
-                  | Your Page Content Here |
-                  -------------------------->
-
+                </div>
+            </nav>
+            <section class="hzy-main">
+                <div id="pageContent">
+                    <iframe class="hzy-iframe hzy-iframe-active" frameborder="0" src="@MainPage" name="@("adminIframe-"+MainPage)"></iframe>
+                </div>
             </section>
-            <!-- /.content -->
+        </content>
+    </main>
+</div>
+
+<!--皮肤模态框-->
+<div class="modal fade" id="examplePositionSidebar" aria-hidden="true" aria-labelledby="examplePositionSidebar" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-sidebar modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">皮肤设置</h3>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">导航条颜色：</label>
+                        <ul class="list-unstyled list-inline" style="text-align: center;">
+                            <li class="pr-5 pl-5 inline-block">
+                                <div class="index-skin index-skin-primary" onclick="hzy.setTheme(null,0);"></div>
+                            </li>
+                            <li class="pr-5 pl-5 inline-block">
+                                <div class="index-skin index-skin-cyan" onclick="hzy.setTheme(null,1);"></div>
+                            </li>
+                            <li class="pr-5 pl-5 inline-block">
+                                <div class="index-skin index-skin-green" onclick="hzy.setTheme(null,2);"></div>
+                            </li>
+                            <li class="pr-5 pl-5 inline-block">
+                                <div class="index-skin index-skin-indigo" onclick="hzy.setTheme(null,3);"></div>
+                            </li>
+                            <li class="pr-5 pl-5 inline-block">
+                                <div class="index-skin index-skin-grey" onclick="hzy.setTheme(null,4);"></div>
+                            </li>
+                            <li class="pr-5 pl-5 inline-block">
+                                <div class="index-skin index-skin-pink" onclick="hzy.setTheme(null,5);"></div>
+                            </li>
+                            <li class="pr-5 pl-5 inline-block">
+                                <div class="index-skin index-skin-purple" onclick="hzy.setTheme(null,6);"></div>
+                            </li>
+                            <li class="pr-5 pl-5 inline-block">
+                                <div class="index-skin index-skin-red" onclick="hzy.setTheme(null,7);"></div>
+                            </li>
+                            <li class="pr-5 pl-5 inline-block">
+                                <div class="index-skin index-skin-teal" onclick="hzy.setTheme(null,8);"></div>
+                            </li>
+                            <li class="pr-5 pl-5 inline-block">
+                                <div class="index-skin index-skin-orange" onclick="hzy.setTheme(null,9);"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <label>菜单皮肤：</label>
+                        <select class="form-control" onchange="hzy.setTheme($(this).val(),null)">
+                            <option value="0">==菜单皮肤==</option>
+                            <option value="0">深色</option>
+                            <option value="1">浅色</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>菜单默认状态：</label>
+                        <select class="form-control" onchange="hzy.menu.toggle(null, $(this).val())">
+                            <option value="">==菜单默认状态==</option>
+                            <option value="2">收起</option>
+                            <option value="1">展开</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-block" data-dismiss="modal">  关闭 </button>
+            </div>
         </div>
-        <!-- /.content-wrapper -->
-        <!-- Main Footer -->
-        <footer class="main-footer">
-            <!-- To the right -->
-            <div class="pull-right hidden-xs">
-
-            </div>
-            <!-- Default to the left -->
-            <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> 塔胡胡.
-        </footer>
-
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Create the tabs -->
-            <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-                <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-                <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-            </ul>
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <!-- Home tab content -->
-                <div class="tab-pane active" id="control-sidebar-home-tab">
-                    <h3 class="control-sidebar-heading">Recent Activity</h3>
-                    <ul class="control-sidebar-menu">
-                        <li>
-                            <a href="javascript:;">
-                                <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-
-                                <div class="menu-info">
-                                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-
-                                    <p>Will be 23 on April 24th</p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.control-sidebar-menu -->
-
-                    <h3 class="control-sidebar-heading">Tasks Progress</h3>
-                    <ul class="control-sidebar-menu">
-                        <li>
-                            <a href="javascript:;">
-                                <h4 class="control-sidebar-subheading">
-                                    Custom Template Design
-                                    <span class="pull-right-container">
-                                        <span class="label label-danger pull-right">70%</span>
-                                    </span>
-                                </h4>
-
-                                <div class="progress progress-xxs">
-                                    <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.control-sidebar-menu -->
-
-                </div>
-                <!-- /.tab-pane -->
-                <!-- Stats tab content -->
-                <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-                <!-- /.tab-pane -->
-                <!-- Settings tab content -->
-                <div class="tab-pane" id="control-sidebar-settings-tab">
-                    <form method="post">
-                        <h3 class="control-sidebar-heading">General Settings</h3>
-
-                        <div class="form-group">
-                            <label class="control-sidebar-subheading">
-                                Report panel usage
-                                <input type="checkbox" class="pull-right" checked>
-                            </label>
-
-                            <p>
-                                Some information about this general settings option
-                            </p>
-                        </div>
-                        <!-- /.form-group -->
-                    </form>
-                </div>
-                <!-- /.tab-pane -->
-            </div>
-        </aside>
-        <!-- /.control-sidebar -->
-        <!-- Add the sidebar's background. This div must be placed
-        immediately after the control sidebar -->
-        <div class="control-sidebar-bg"></div>
     </div>
-</body>
-</html>
+</div>
+@section css{
+    <link href="~/Content/metisMenu.css" rel="stylesheet" />
+    <style type="text/css">
+
+        body {
+            overflow: hidden;
+        }
+
+        .dropdown-menu {
+            margin-top: 0;
+        }
+
+        #hzy-container {
+            height: 100%;
+        }
+    </style>
+}
+@section js{
+    <script src="~/Scripts/Router.js"></script>
+    <script src="~/Scripts/metisMenu.js"></script>
+    <script src="~/Scripts/main.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            hzyRouter.init();
+            hzy.init();
+            $('#hzy-tools > .dropdown-toggle').dropdown();
+            $('#hzy-container').on('click', function () {
+                $('#hzy-tools > .dropdown-toggle').dropdown('toggle');
+            });
+
+            setTimeout(function () {
+                $("#menu li .has-arrow.has-first-menu").eq(0).click();
+            }, 200);
+        });
+    </script>
+}

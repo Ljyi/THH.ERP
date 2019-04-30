@@ -2,12 +2,12 @@
 using System.Web.Mvc;
 using THH.Model.Dto;
 using THH.Service;
+using THH.Web.BaseApplication;
 
 namespace THH.Web.Areas.System.Controllers
 {
-    public class UserController : Controller
+    public class UserController : ServicedController<UserService>
     {
-        UserService userService = new UserService();
         // GET: System/User
         public ActionResult Index()
         {
@@ -22,7 +22,7 @@ namespace THH.Web.Areas.System.Controllers
         public JsonResult GetUserGrid(int limit = 0, int offset = 0, string userName = "", string loginName = "")
         {
             ///   int supplierID = ServiceHelper.GetCurrentUser().UserID;
-            List<UserDto> userDtos = userService.GetUserGrid(limit, offset, userName, loginName);
+            List<UserDto> userDtos = Service.GetUserGrid(limit, offset, userName, loginName);
             return Json(new { total = userDtos.Count, rows = userDtos }, JsonRequestBehavior.AllowGet);
         }
         #endregion

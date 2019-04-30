@@ -1,16 +1,19 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using THH.DAL;
+using THH.DAL.Repository;
 using THH.Model;
+using THH.Model.Dto;
 
 namespace THH.Service
 {
     public class SysMenuService
     {
-        private DAL.Repository.IRepository<SysMenu> sysMenuRepository = null;
+        private IRepository<SysMenu> sysMenuRepository = null;
         public SysMenuService()
         {
             sysMenuRepository = new RepositoryBase<SysMenu>();
@@ -125,6 +128,12 @@ namespace THH.Service
                 },
             };
             sysMenuRepository.Insert(sysMenuList);
+        }
+
+        public List<MenuDto> GetMenuGrid(int limit, int offset)
+        {
+            var sysMenu = sysMenuRepository.Entities.ToList();
+            return Mapper.Map<List<SysMenu>, List<MenuDto>>(sysMenu);
         }
     }
 }

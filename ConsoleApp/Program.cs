@@ -19,7 +19,7 @@ namespace ConsoleApp
         {
             UserService userService = new UserService();
             SysFunctionService sysFunctionService = new SysFunctionService();
-            RoleService roleService = new RoleService();
+          //  RoleService roleService = new RoleService();
             UserRightsService userRightsService = new UserRightsService();
             SysButtonService sysButtonService = new SysButtonService();
             SysMenuService sysMenuService = new SysMenuService();

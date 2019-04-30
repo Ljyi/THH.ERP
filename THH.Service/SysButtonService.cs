@@ -1,12 +1,11 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using THH.DAL;
 using THH.DAL.Repository;
-using THH.Model;
 using THH.Model.BaseModule;
+using THH.Model.Dto;
 
 namespace THH.Service
 {
@@ -110,6 +109,17 @@ namespace THH.Service
                 }
             };
             sysButtonRepository.Insert(sysButtonList);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="limit"></param>
+        /// <param name="offset"></param>
+        /// <returns></returns>
+        public List<ButtonDto> GetButtonGrid(int limit, int offset)
+        {
+            var sysButtons = sysButtonRepository.Entities.ToList();
+            return Mapper.Map<List<SysButton>, List<ButtonDto>>(sysButtons);
         }
     }
 }

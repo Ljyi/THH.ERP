@@ -3,7 +3,6 @@
     ViewBag.Title = "THH 管理系统";
     var MainPage = "/System/Home/Main/";
 }
-
 <div id="hzy-container" class="animated fadeIn">
     <header class="index-skin-primary">
         <div class="hzy-header-pc hidden-sm-down">
@@ -40,16 +39,75 @@
                             <i class="fa fa-fw fa-home fa-lg"></i>&nbsp;&nbsp;<span>首页</span>
                         </a>
                     </li>
-                    <li class="active">
-                        <a class="has-arrow has-first-menu" href="javascript:void(0)" aria-expanded="true"><i class="fa fa-desktop fa-lg"></i>&nbsp;&nbsp;<span>系统管理</span></a><ul aria-expanded="true" class="collapse in" style="">
+                    <li>
+                        <a class="has-arrow has-first-menu" href="javascript:void(0)" aria-expanded="true"><i class="fa fa-desktop fa-lg"></i>&nbsp;&nbsp;<span>系统管理</span></a>
+                        <ul aria-expanded="true" class="collapse in" style="">
                             <li><a href="javascript:void(0);var url='/System/User/Index';" hzy-router-href="/System/User/Index" hzy-router-text="用户管理" class="active"><i class=""></i>&nbsp;&nbsp;<span>用户管理</span></a></li>
-                            <li><a href="javascript:void(0);var url='/Admin/Role/Index';" hzy-router-href="/Admin/Role/Index" hzy-router-text="角色管理" class=""><i class=""></i>&nbsp;&nbsp;<span>角色管理</span></a></li>
+                            <li><a href="javascript:void(0);var url='/System/Role/Index';" hzy-router-href="/System/Role/Index" hzy-router-text="角色管理" class=""><i class=""></i>&nbsp;&nbsp;<span>角色管理</span></a></li>
                             <li><a href="javascript:void(0);var url='/Admin/Function/Index';" hzy-router-href="/Admin/Function/Index" hzy-router-text="功能管理" class=""><i class=""></i>&nbsp;&nbsp;<span>功能管理</span></a></li>
-                            <li><a href="javascript:void(0);var url='/Admin/MenuFunction/Index';" hzy-router-href="/Admin/MenuFunction/Index" hzy-router-text="菜单功能" class=""><i class=""></i>&nbsp;&nbsp;<span>菜单功能</span></a></li>
+                            <li><a href="javascript:void(0);var url='/System/Menu/Index';" hzy-router-href="/System/Menu/Index" hzy-router-text="菜单功能" class=""><i class=""></i>&nbsp;&nbsp;<span>菜单功能</span></a></li>
                             <li><a href="javascript:void(0);var url='/Admin/RoleFunction/Index';" hzy-router-href="/Admin/RoleFunction/Index" hzy-router-text="角色功能" class=""><i class=""></i>&nbsp;&nbsp;<span>角色功能</span></a></li>
-                            <li><a href="javascript:void(0);var url='/Admin/ChangePwd/Index';" hzy-router-href="/Admin/ChangePwd/Index" hzy-router-text="修改密码" class=""><i class=""></i>&nbsp;&nbsp;<span>修改密码</span></a></li>
+                            <li><a href="javascript:void(0);var url='/System/Button/Index';" hzy-router-href="/System/Button/Index" hzy-router-text="按钮管理" class=""><i class=""></i>&nbsp;&nbsp;<span>按钮管理</span></a></li>
+                            <li><a href="javascript:void(0);var url='/Home/BootStrapTable';" hzy-router-href="/Home/BootStrapTable" hzy-router-text="修改密码" class=""><i class=""></i>&nbsp;&nbsp;<span>修改密码</span></a></li>
                         </ul>
                     </li>
+                    <li>
+                        <a class="has-arrow has-first-menu" href="javascript:void(0)" aria-expanded="true"><i class="fa fa-desktop fa-lg"></i>&nbsp;&nbsp;<span>商品管理</span></a>
+                        <ul aria-expanded="true" class="collapse in" style="">
+                            <li>
+                                <a href="javascript:void(0);var url='/Product/Product/Index';" hzy-router-href="/Product/Product/Index" hzy-router-text="商品列表">
+                                    <i class=""></i>&nbsp;&nbsp;<span>商品列表</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow has-first-menu" href="javascript:void(0)" aria-expanded="true"><i class="fa fa-desktop fa-lg"></i>&nbsp;&nbsp;<span>订单管理</span></a>
+                        <ul aria-expanded="true" class="collapse in" style="">
+                            <li>
+                                <a href="javascript:void(0);var url='/Order/Order/Index';" hzy-router-href="/Order/Order/Index" hzy-router-text="订单列表">
+                                    <i class=""></i>&nbsp;&nbsp;<span>订单列表</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow has-first-menu" href="javascript:void(0)" aria-expanded="true"><i class="fa fa-desktop fa-lg"></i>&nbsp;&nbsp;<span>设备管理</span></a>
+                        <ul aria-expanded="true" class="collapse in" style="">
+                            <li>
+                                <a href="javascript:void(0);var url='/Machine/Machine/Index';" hzy-router-href="/Machine/Machine/Index" hzy-router-text="设备列表">
+                                    <i class=""></i>&nbsp;&nbsp;<span>设备列表</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow has-first-menu" href="javascript:void(0)" aria-expanded="true"><i class="fa fa-desktop fa-lg"></i>&nbsp;&nbsp;<span>库存管理</span></a>
+                        <ul aria-expanded="true" class="collapse in" style="">
+                            <li>
+                                <a href="javascript:void(0);var url='/Stock/Stock/Index';" hzy-router-href="/Stock/Stock/Index" hzy-router-text="库存列表">
+                                    <i class=""></i>&nbsp;&nbsp;<span>库存列表</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow has-first-menu" href="javascript:void(0)" aria-expanded="true"><i class="fa fa-desktop fa-lg"></i>&nbsp;&nbsp;<span>广告管理</span></a>
+                        <ul aria-expanded="true" class="collapse in" style="">
+                            <li>
+                                <a href="javascript:void(0);var url='/AdvertiseMent/AdvertiseMent/Index';" hzy-router-href="/AdvertiseMent/AdvertiseMent/Index" hzy-router-text="广告列表">
+                                    <i class=""></i>&nbsp;&nbsp;<span>广告列表</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a class="has-arrow has-first-menu" href="javascript:void(0)" aria-expanded="true"><i class="fa fa-desktop fa-lg"></i>&nbsp;&nbsp;<span>日志管理</span></a>
+                        <ul aria-expanded="true" class="collapse in" style="">
+                            <li><a href="javascript:void(0);var url='/System/User/Index';" hzy-router-href="/System/User/Index" hzy-router-text="日志" class="active"><i class=""></i>&nbsp;&nbsp;<span>用户管理</span></a></li>
+                        </ul>
+                    </li>
+
                 </ul>
             </div>
         </nav>

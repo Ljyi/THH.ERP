@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace THH.Model.BaseModule
 {
@@ -19,5 +15,8 @@ namespace THH.Model.BaseModule
         public string LogType { get; set; }
         [Required]
         public string LogContent { get; set; }
+
+        public DateTime CreateDate { get; set; }
+
     }
 }

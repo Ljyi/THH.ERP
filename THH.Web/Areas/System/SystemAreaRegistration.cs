@@ -11,13 +11,13 @@ namespace THH.Web.Areas.System
                 return "System";
             }
         }
-
         public override void RegisterArea(AreaRegistrationContext context) 
         {
             context.MapRoute(
                 "System_default",
                 "System/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { action = "Index", id = UrlParameter.Optional },
+                new string[] { "THH.Web.Areas.System.Controllers" }
             );
         }
     }

@@ -1,8 +1,11 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using THH.DAL;
 using THH.DAL.Repository;
 using THH.Model;
+using THH.Model.Dto;
 
 namespace THH.Service
 {
@@ -32,6 +35,12 @@ namespace THH.Service
                 }
             };
             roleRepository.Insert(roleList);
+        }
+
+        public List<RoleDto> GetRoleGrid(int limit, int offset)
+        {
+            var user = roleRepository.Entities.ToList();
+            return Mapper.Map<List<Role>, List<RoleDto>>(user);
         }
     }
 }
